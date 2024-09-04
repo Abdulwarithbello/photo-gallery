@@ -174,8 +174,10 @@ footer{
     margin-top: 0;
   }
   footer div{
-    margin-top: 20px;
+    margin-top: 20px; /* git class */
+    /* github */
   }
+  
   @media screen and (min-width:0) and (max-width:600px) {
     .gallery{
         /* grid-template-columns: repeat(1,1fr); */
@@ -214,4 +216,5 @@ footer{
         font-size: 1rem;
     }
   }
+  
  
