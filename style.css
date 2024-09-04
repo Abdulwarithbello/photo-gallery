@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #333;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+}
+header img{
+    height: 60px;
+    width: 100px;
+    margin: 10px 0;
+}
+nav ul li{
+    list-style: none;
+    margin: 20px 30px;
+    font-size: 1.5rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ddd270;
+    
+}
+nav ul li a:hover{
+    background-color: white;
+}
+/* .dropdown{
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    display: none;
+}
+.dropdown ul li{
+    margin: 5px 10px;
+    font-size: medium;
+}
+.fa-solid{
+    display: none;
+    margin: 20px;
+} */
+section {
+    /* opacity: 99%; */
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+   background-color: #333;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 12.5rem);
+    gap: .5rem; 
+}
+.gallery_item {
+    margin: .2rem;
+}
+.gallery_link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    filter:blur(10px);
+    transition: transform .5s, filter .2s;
+}
+.gallery_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+    filter: brightness(10px);
+    
+}
+.gallery_link:hover .gallery_overlay {
+    opacity: 1;
+}
+.gallery_link:hover .gallery_image{
+    transform: scale(1.2);
+    filter: blur(0);
+}
+.gallery_overlay span {
+    position: relative;
+    line-height: 3rem;
+}
+.gallery_overlay span::before,
+.gallery_overlay span::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: rgba(255, 255, 255, 0.693);
+    transition: width .3s ease-out .2s;
+}
+.gallery_overlay span:before {
+    top: 0;
+    left: 0;
+}
+
+.gallery_overlay span:after {
+    bottom: 0;
+    right: 0;
+}
+
+.gallery_link:hover .gallery_overlay span:before,
+.gallery_link:hover .gallery_overlay span:after {
+    width: 100%;    
+}
+.gallery_grid-2{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.gallery_grid-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .gallery_grid-3{
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-column-start: 1;
+  }
+  .gallery_grid-4{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 3;
+   grid-row-end: 5;
+  }
+  .gallery_grid-5{
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .gallery_grid-6{
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+footer{
+    height: 350px;
+    background-color: #333;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: #999891;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  footer img{
+    margin-top: 0;
+  }
+  footer div{
+    margin-top: 20px;
+  }
+  @media screen and (min-width:0) and (max-width:600px) {
+    .gallery{
+        /* grid-template-columns: repeat(1,1fr); */
+        display: block;
+    }
+    header{
+        background-color: #333;
+        height: 3rem;
+        padding: .5rem;
+        min-width: 200px;
+        max-width: 600px;
+    }
+    header img{
+        height: 30px;
+        width: 70px;
+        margin: 10px 0;
+    }
+    /* header nav{
+        display: none;
+    } */
+    nav ul li{
+        margin: 5px 10px;
+        font-size: .5rem;
+    }
+    footer{
+        min-width: 200px;
+        max-width: 600px;
+    }
+  }
+  @media screen and (min-width:601px) and (max-width:800px) {
+    .gallery{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav ul li{
+        margin: 10px 20px;
+        font-size: 1rem;
+    }
+  }
+ 
