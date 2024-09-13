@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b276989ce8.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b276989ce8.js" crossorigin="anonymous"></script>
-    <!-- <script>
-      const icon = document.querySelector('.fa-solid')
-      const drop = document.querySelector('.dropdown')
-      icon.addEventListener('click',function(){
-          dropd.style.display='block'
-      })
-  </script> -->
+  
 </head>
 <body>
     <header>
@@ -26,16 +20,23 @@
                 <li><a href="">Contact us</a></li>
             </ul>
         </nav>
-        <!-- <i class="fa-solid fa-bars fa-xl"></i> -->
+        <span class="icon"><i class="fa-solid fa-bars fa-xl"></i></span>
     </header>
-    <!-- <div class="dropdown">
+    <div class="dropdown">
          <ul>
              <li><a href="">Home</a></li>
              <li><a href="">Gallery</a></li>
              <li><a href="">About us</a></li>
              <li><a href="">Contact us</a></li>
          </ul>
-    </div> -->
+    </div>
+    <script>
+      const icon = document.querySelector('.fa-solid')
+      const drop = document.querySelector('.dropdown')
+      icon.addEventListener('click',function(){
+          drop.style.display='block'
+      })
+  </script>
     <section>
         <div class="gallery">
          <div class="gallery_item gallery_grid-1">
